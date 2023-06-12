@@ -6,6 +6,7 @@ import java.util.List;
 public class Cart {
     private List<Item> items = new ArrayList<>();
 
+
     public void add(Item item) {
         items.add(item);
     }
@@ -16,6 +17,7 @@ public class Cart {
 
     public void removeItem(Item item) {
         items.remove(item);
+        BusinessInteligence.itemWasRemoved(item);
     }
     @Override
     public String toString() {
