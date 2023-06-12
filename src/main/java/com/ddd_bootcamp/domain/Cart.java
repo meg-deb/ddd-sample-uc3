@@ -14,6 +14,9 @@ public class Cart {
         return items;
     }
 
+    public void removeItem(Item item) {
+        items.remove(item);
+    }
     @Override
     public String toString() {
         return "Cart{" +
