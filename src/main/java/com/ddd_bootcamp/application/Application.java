@@ -14,16 +14,15 @@ public class Application {
         Item headphoneItem = new Item(headphone,1);
         cart.add(headphoneItem);
 
-        Product applePencil = new Product("Apple Pencil");
-        Item applePencilItem = new Item(applePencil, 2);
-        cart.add(applePencilItem);
+        Cart secondCart = new Cart();
+        Product anotherHeadphone = new Product("Sony Wireless headphone");
+        Item anotherHeadphoneItem = new Item(anotherHeadphone, 1);
+        secondCart.add(anotherHeadphoneItem);
 
+        secondCart.equals(cart);
         System.out.println("--------------------------------------------------------");
-        System.out.println("Cart = " + cart);
-        List<Item> items = cart.getItems();
-        System.out.println("--------------------------------------------------------");
-        System.out.println("items = " + items);
-        System.out.println("--------------------------------------------------------");
+        System.out.println("secondCart.equals(cart) = " + secondCart.equals(cart));
+        System.out.println("secondCart.equals(secondCart) = " + secondCart.equals(secondCart));
 
     }
 }
